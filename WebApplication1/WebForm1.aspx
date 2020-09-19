@@ -18,15 +18,13 @@
     </style>
     <h1>WebForms</h1>
     <form runat="server">
-        <div>
             <table >
                 <tr>
-                   <th  class="titleTable">Model</th>
-                   <th  class="titleTable">Fuel</th>
+                   <th class="titleTable">Model</th>
+                   <th class="titleTable">Fuel</th>
                 </tr>
                     <asp:Label ID="data_table" runat="server"></asp:Label>
             </table>
-        </div>
             <asp:LinkButton OnClick="show_fuel" runat="server">Show fuels</asp:LinkButton>
 
     </form>

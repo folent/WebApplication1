@@ -16,7 +16,6 @@ namespace WebApplication1.App_Code
             connect.Open();
             return connect;
         }
-
         public SqlDataReader getReader(string query)
         {
             SqlCommand cmd = new SqlCommand(query);
@@ -26,7 +25,6 @@ namespace WebApplication1.App_Code
             SqlDataReader reader = cmd.ExecuteReader();
             return reader;
         }
-
         public void closeConnection()
         {
             if(connect != null && connect.State == System.Data.ConnectionState.Open)
