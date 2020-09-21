@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -24,6 +26,15 @@ namespace WebApplication1.App_Code
 
             SqlDataReader reader = cmd.ExecuteReader();
             return reader;
+        }
+        public string getAdapterJSON(string query)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter(query, this.connect);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+            string text = JsonConvert.SerializeObject(ds.Tables[0]);
+            return text;
         }
         public void closeConnection()
         {

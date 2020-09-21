@@ -13,44 +13,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DBMaster db = new DBMaster();
-            SqlDataReader reader = db.getReader("SELECT * FROM Cars");
 
-            string temp = "";
-          
-            while (reader.Read())
-            {
-                temp += "<tr><td>";
-                temp += reader["Model"].ToString();
-                temp += "</td><td>";
-                temp += reader["fuel"].ToString();
-                temp += "</td></tr>";
-            }
-            db.closeConnection();
-            data_table.Text = temp;
         }
-
-        public void show_fuel(object sender, EventArgs e)
-        {
-            if (fuels.Text.Length > 0)
-            {
-                fuels.Text = "";
-                return;
-            }
-            DBMaster db = new DBMaster();
-            SqlDataReader reader = db.getReader("SELECT DISTINCT fuel FROM Cars");
-
-            string temp = "";
-
-            while (reader.Read())
-            {
-                temp += "<div>";
-                temp += reader["fuel"].ToString();
-                temp += "</div>";
-            }
-            db.closeConnection();
-            fuels.Text = temp;
-        }
-
     }
 }

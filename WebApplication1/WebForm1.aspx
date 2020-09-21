@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+<%@ Register TagPrefix="uc" TagName="AddCar" Src="~/UserControls/AddCarUserControl.ascx" %>
 
 <!DOCTYPE html>
 
@@ -9,26 +10,21 @@
 </head>
  
 <body>
-    <style type="text/css">
-        .titleTable {
-            background-color: grey;
-            color: white;
-            font-weight: bold;
-        }
-    </style>
     <h1>WebForms</h1>
-    <form runat="server">
-            <table >
-                <tr>
-                   <th class="titleTable">Model</th>
-                   <th class="titleTable">Fuel</th>
-                </tr>
-                    <asp:Label ID="data_table" runat="server"></asp:Label>
-            </table>
-            <asp:LinkButton OnClick="show_fuel" runat="server">Show fuels</asp:LinkButton>
-
+    <div style="display:flex;justify-content:space-between;width:500px">
+        <div>
+            <button id="btn1">Get Cars</button>
+            <table id="cars"></table>
+        </div>
+        <div>
+            <button id="btn2">Show fuels</button>
+            <table id="fuels" runat="server"></table>
+        </div>
+    </div>
+        <form runat="server">
+        <uc:AddCar ID="AddCar" runat="server" />
     </form>
-    <asp:Label ID="fuels" runat="server"></asp:Label>
     <a href="WebForm2.aspx" >Больше информации об автомобилях</a>
 </body>
+    <script src="Ajax/script.js"></script>
 </html>

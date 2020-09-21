@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApplication1.WebForm2" %>
-
+<%@ Register TagPrefix="uc" TagName="CarsDetails" Src="~/UserControls/CarsDetailsUserControl.ascx" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-   <asp:Label ID="cars_details" runat="server" ></asp:Label>
+    <uc:CarsDetails ID="CarsDetails" runat="server" />
     <a href="WebForm1.aspx" >Назад</a>
 </body>
 </html>

@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,13 +70,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ajax\script.js" />
+    <Content Include="UserControls\AddCarUserControl.ascx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="UserControls\CarsDetailsUserControl.ascx" />
+    <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DBMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\AddCarUserControl.ascx.cs">
+      <DependentUpon>AddCarUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddCarUserControl.ascx.designer.cs">
+      <DependentUpon>AddCarUserControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -88,6 +102,17 @@
     <Compile Include="WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CarsDetailsUserControl.ascx.cs">
+      <DependentUpon>CarsDetailsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CarsDetailsUserControl.ascx.designer.cs">
+      <DependentUpon>CarsDetailsUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -97,6 +122,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

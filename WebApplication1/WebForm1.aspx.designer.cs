@@ -15,21 +15,21 @@ namespace WebApplication1
     {
 
         /// <summary>
-        /// data_table элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label data_table;
-
-        /// <summary>
         /// fuels элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fuels;
+        protected global::System.Web.UI.HtmlControls.HtmlTable fuels;
+
+        /// <summary>
+        /// AddCar элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.AddCarUserControl AddCar;
     }
 }

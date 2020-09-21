@@ -11,16 +11,7 @@ namespace WebApplication1
 {
 
 
-    public partial class WebForm2
+    public partial class MyControl
     {
-
-        /// <summary>
-        /// CarsDetails элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::WebApplication1.MyControl CarsDetails;
     }
 }
