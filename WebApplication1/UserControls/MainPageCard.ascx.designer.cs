@@ -11,43 +11,34 @@ namespace WebApplication1.UserControls
 {
 
 
-    public partial class AddCarUserControl
+    public partial class MainPageCard
     {
 
         /// <summary>
-        /// txtModel элемент управления.
+        /// MainPageCardTitle элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MainPageCardTitle;
 
         /// <summary>
-        /// txtFuel элемент управления.
+        /// MainPageCardDesc элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFuel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MainPageCardDesc;
 
         /// <summary>
-        /// txtAdd элемент управления.
+        /// MainPageCardLink элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtAdd;
-
-        /// <summary>
-        /// Label1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor MainPageCardLink;
     }
 }

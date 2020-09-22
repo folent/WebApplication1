@@ -13,7 +13,23 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string sql = "SELECT * FROM Cars";
+            DBMaster db = new DBMaster();
+            db.getConnection();
+            SqlDataReader reader = db.getReader(sql);
 
+            while(reader.Read())
+            {
+                UserControls.MainPageCard MainPageCard = (UserControls.MainPageCard)
+                Page.LoadControl("~/UserControls/MainPageCard.ascx");
+                MainPageCard.Title = reader["Model"].ToString();
+                MainPageCard.Desc = reader["fuel"].ToString();
+                MainPageCard.id = reader["Car_Id"].ToString();
+                MainPageCard.Link = "../"+reader["Car_Id"].ToString();
+                Panel1.Controls.Add(MainPageCard);
+            }
+             
+            db.closeConnection();
         }
     }
 }

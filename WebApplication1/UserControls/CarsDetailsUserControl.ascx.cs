@@ -21,9 +21,7 @@ namespace WebApplication1
 
             Table table = new Table();
             table.ID = "Table1";
-            table.BackColor = Color.Gray;
-            table.ForeColor = Color.White;
-            table.CellPadding = 20;
+            table.CssClass = "table table-hover w-50 m-auto";
             Page.Form.Controls.Add(table);
 
             while (reader.Read())
